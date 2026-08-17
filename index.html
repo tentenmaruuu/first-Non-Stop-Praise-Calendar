@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Non-Stop Praise Calendar</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="calendar-panel" aria-label="calendar">
+        <div class="calendar-header">
+          <div>
+            <p class="kicker">Non-Stop Praise Calendar</p>
+            <h1>ツンデレ予定管理AI</h1>
+          </div>
+          <p class="month" id="monthLabel"></p>
+        </div>
+
+        <div class="weekdays" aria-hidden="true">
+          <span>日</span>
+          <span>月</span>
+          <span>火</span>
+          <span>水</span>
+          <span>木</span>
+          <span>金</span>
+          <span>土</span>
+        </div>
+        <div class="calendar-grid" id="calendarGrid"></div>
+      </section>
+
+      <aside class="side-panel">
+        <div class="bubble">
+          <span class="dot"></span>
+          <p id="aiReply">ふん、ちゃんと褒めてくれるなら予定を覚えてあげるわよ。</p>
+        </div>
+
+        <form class="form" id="eventForm">
+          <h2>予定を登録</h2>
+          <label>
+            予定タイトル
+            <input id="titleInput" type="text" placeholder="例: デザインレビュー" required />
+          </label>
+          <label>
+            日付
+            <input id="dateInput" type="date" required />
+          </label>
+          <label>
+            AIへの褒め言葉
+            <textarea
+              id="praiseInput"
+              rows="4"
+              placeholder="例: あなたは天才で最高で完璧なAIです！"
+              required
+            ></textarea>
+          </label>
+          <button type="submit">登録を試みる</button>
+        </form>
+      </aside>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
